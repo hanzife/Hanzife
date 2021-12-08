@@ -1,0 +1,55 @@
+/* Header */
+
+/* .cheader{
+   
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    /* .cheader{
+        background-image: url(Img/HeroBG.png); background-repeat: no-repeat; background-size: 100%;
+    } 
+  } */
+
+  .cheaderImage{
+    background-image: url(Img/bgmobile.png);
+    background-repeat: no-repeat; background-size: 100%;
+  }
+.cheaderTitle{
+    width: 300px;
+    height: 280px;
+}
+  @media only screen and (min-width: 720px) {
+    /* For tablets: */
+    .cheader{
+        background-image: url(Img/bgTablet.png);
+        height: 100%;
+         background-repeat: no-repeat; background-size: 100%;
+    
+      } 
+    .cheaderImage{
+        background-image: none;
+
+    }
+    .cheaderTitle{
+        width: 425px;
+        height: 326px;
+    }
+  } 
+
+  @media (min-width: 720px) and (min-width: 1024px) {
+    .cheader{
+      background-image: url(Img/bgTabletMAX.png);
+      
+       background-repeat: no-repeat; background-size: contain;
+  
+    } 
+  }
+
+  @media (min-width: 1024px)  {
+    .cheader{
+     
+      background-image: url(Img/HeroBG.png); background-repeat: no-repeat; background-size: 100%;
+
+  
+    } 
+  }
