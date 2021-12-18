@@ -10,6 +10,12 @@
     } 
   } */
 
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
   .cheaderImage{
     background-image: url(Img/bgmobile.png);
     background-repeat: no-repeat; background-size: 100%;
