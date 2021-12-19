@@ -9,7 +9,10 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.6/jquery.bxslider.min.css"></script>
 
 
 
@@ -587,27 +590,107 @@
         <h1 class="text-4xl font-bold m-auto w-2/3 sm:w-full">What my partners say
         </h1>
 
-        <!-- Reviews -->
 
+       
+        <!--Reviews -->
+       
+            <div class=" w-full container mx-auto" x-data="{ testimonialActive: 2 }" x-cloak>
+             
+                <div class="flex flex-col h-full relative">
+                    <!-- Testimonial Icon -->
+                  <div class="absolute top-0 left-0 mt-3 ml-4 md:mt-5 md:ml-12">
+                    <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.46">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M66.9833 46.343C66.5843 45.1143 65.8924 43.9886 64.9297 42.9705C63.9211 41.9065 62.5959 41.0832 60.9524 40.4878C59.3073 39.8972 57.1951 39.598 54.5921 39.598H51.0597C51.4808 35.2502 53.0293 31.5499 55.7083 28.4909C58.3826 25.4414 62.0907 22.7577 66.8312 20.4555L63.956 16C57.7145 18.6584 52.3739 22.5471 47.9374 27.6834C43.5024 32.8245 41.2937 37.9181 41.2937 42.9705C41.2937 48.3982 42.5746 52.6557 45.157 55.729C47.7394 58.8022 51.4381 60.3333 56.2467 60.3333C59.2978 60.3333 61.9483 59.3152 64.203 57.2807C66.4545 55.2492 67.5833 52.8695 67.5833 50.1557C67.5833 48.8462 67.3854 47.5717 66.9833 46.343ZM34.6896 46.343C34.2874 45.1143 33.5971 43.9886 32.6328 42.9705C31.6274 41.9065 30.3006 41.0832 28.6555 40.4878C27.0136 39.8972 24.9014 39.598 22.2969 39.598H18.7629C19.1856 35.2502 20.7325 31.5499 23.4099 28.4909C26.0858 25.4414 29.7971 22.7577 34.5344 20.4555L31.6607 16C25.4176 18.6584 20.0802 22.5471 15.6421 27.6834C11.2072 32.8245 9 37.9181 9 42.9705C9 48.3982 10.2777 52.6557 12.8617 55.729C15.441 58.8022 19.1397 60.3333 23.9515 60.3333C27.001 60.3333 29.6546 59.3152 31.9092 57.2807C34.1607 55.2492 35.2881 52.8695 35.2881 50.1557C35.2881 48.8462 35.087 47.5717 34.6896 46.343Z" fill="#E57404"/>
+                        <path d="M65.5577 46.8096L65.5566 46.8063C65.2339 45.8127 64.6673 44.8762 63.8398 44.0011C63.0223 43.1392 61.9111 42.4308 60.4436 41.8989C59.0183 41.3876 57.0943 41.098 54.5921 41.098H51.0597H49.4073L49.5667 39.4534C50.0157 34.8177 51.6784 30.8157 54.5799 27.5027L54.5806 27.5019C57.1196 24.6066 60.4973 22.0658 64.6676 19.869L63.3907 17.8905C57.8527 20.4368 53.0835 24.0204 49.0731 28.6632L65.5577 46.8096ZM65.5577 46.8096C65.9089 47.8827 66.0833 48.9995 66.0833 50.1557C66.0833 52.3926 65.1755 54.3829 63.1981 56.167L63.198 56.167M65.5577 46.8096L63.198 56.167M63.198 56.167C61.22 57.952 58.9278 58.8333 56.2467 58.8333C51.7826 58.8333 48.545 57.4293 46.3054 54.764C44.0206 52.045 42.7937 48.173 42.7937 42.9705C42.7937 38.3844 44.7927 33.6253 49.073 28.6633L63.198 56.167ZM32.3713 19.8692C28.2032 22.0657 24.8229 24.6064 22.2825 27.5016L22.2812 27.503C19.3813 30.8162 17.7206 34.818 17.2699 39.4528L17.1099 41.098H18.7629H22.2969C24.8017 41.098 26.7255 41.3878 28.1471 41.8991C29.6177 42.4315 30.7295 43.1402 31.5426 44.0007L31.5438 44.002C32.3706 44.875 32.9368 45.8112 33.2633 46.8073C33.6115 47.885 33.7881 49.0029 33.7881 50.1557C33.7881 52.3931 32.8813 54.3833 30.9044 56.167L30.9043 56.167C28.9265 57.9518 26.6313 58.8333 23.9515 58.8333C19.4838 58.8333 16.2468 57.429 14.0107 54.7647L14.0098 54.7637C11.7242 52.0453 10.5 48.1739 10.5 42.9705C10.5 38.3843 12.4975 33.6253 16.7774 28.6637C20.7896 24.0205 25.5563 20.4368 31.0951 17.8905L32.3713 19.8692Z" stroke="#E57404" stroke-opacity="0.46" stroke-width="3"/>
+                        </g>
+                        </svg>
+                  </div>
 
-        <p class="mt-9 xl:w-4/6 text-lg m-auto">
-            Yassir's work was outstanding. He is bright, enthusiastic and creative. Yassir was always willing to go
-            above & beyond what was asked of him. He will be an asset to any organization or project he feels drawn to
-        </p>
-        <img class="m-auto pt-8" src="Img/1631718571467.jpg" alt="">
-        <b>Younes Sabir</b>
-        <p>Founder @ MyPYLI</p>
+                  <div class="absolute top-0 right-0 mt-3 ml-4 md:mt-5 md:ml-12">
+                    <svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.46">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1007 44.594C10.4997 43.3653 11.1916 42.2396 12.1543 41.2215C13.1629 40.1575 14.4881 39.3341 16.1316 38.7388C17.7767 38.1482 19.8889 37.849 22.4919 37.849H26.0243C25.6031 33.5011 24.0546 29.8009 21.3756 26.7419C18.7014 23.6924 14.9932 21.0086 10.2527 18.7065L13.128 14.251C19.3695 16.9094 24.7101 20.7981 29.1466 25.9344C33.5815 31.0755 35.7903 36.1691 35.7903 41.2215C35.7903 46.6491 34.5094 50.9067 31.927 53.98C29.3446 57.0532 25.6459 58.5843 20.8373 58.5843C17.7862 58.5843 15.1357 57.5662 12.881 55.5316C10.6295 53.5002 9.50064 51.1205 9.50064 48.4066C9.50064 47.0972 9.69855 45.8226 10.1007 44.594ZM42.3944 44.594C42.7966 43.3653 43.4869 42.2396 44.4512 41.2215C45.4566 40.1575 46.7834 39.3341 48.4285 38.7388C50.0704 38.1482 52.1825 37.849 54.7871 37.849H58.3211C57.8984 33.5011 56.3515 29.8009 53.674 26.7419C50.9982 23.6924 47.2869 21.0086 42.5495 18.7065L45.4233 14.251C51.6664 16.9094 57.0038 20.7981 61.4419 25.9344C65.8768 31.0755 68.084 36.1691 68.084 41.2215C68.084 46.6491 66.8062 50.9067 64.2222 53.98C61.643 57.0532 57.9443 58.5843 53.1325 58.5843C50.083 58.5843 47.4294 57.5662 45.1747 55.5316C42.9232 53.5002 41.7959 51.1205 41.7959 48.4066C41.7959 47.0972 41.997 45.8226 42.3944 44.594Z" fill="#E57404"/>
+                        <path d="M11.5263 45.0606L11.5274 45.0573C11.8499 44.064 12.4163 43.1278 13.2433 42.253C14.0608 41.3907 15.1723 40.682 16.6403 40.1499C18.0657 39.6385 19.9897 39.349 22.4919 39.349H26.0243H27.6766L27.5173 37.7043C27.0683 33.0687 25.4056 29.0667 22.5041 25.7536L22.5034 25.7529C19.9644 22.8576 16.5867 20.3168 12.4164 18.12L13.6933 16.1415C19.2313 18.6878 24.0005 22.2714 28.0108 26.9142L11.5263 45.0606ZM11.5263 45.0606C11.175 46.1337 11.0006 47.2505 11.0006 48.4066C11.0006 50.6435 11.9085 52.6339 13.8859 54.4179L13.8859 54.418M11.5263 45.0606L13.8859 54.418M13.8859 54.418C15.864 56.203 18.1562 57.0843 20.8373 57.0843C25.3014 57.0843 28.539 55.6802 30.7786 53.015C33.0633 50.296 34.2903 46.424 34.2903 41.2215C34.2903 36.6354 32.2913 31.8763 28.0109 26.9143L13.8859 54.418ZM44.7127 18.1201C48.8808 20.3167 52.2611 22.8573 54.8015 25.7526L54.8028 25.754C57.7027 29.0672 59.3634 33.0689 59.8141 37.7038L59.974 39.349H58.3211H54.7871C52.2823 39.349 50.3585 39.6388 48.9368 40.15C47.4663 40.6825 46.3545 41.3912 45.5414 42.2517L45.5402 42.253C44.7134 43.1259 44.1473 44.062 43.8208 45.058C43.4725 46.1358 43.2959 47.2537 43.2959 48.4066C43.2959 50.6441 44.2027 52.6343 46.1796 54.4179L46.1797 54.418C48.1575 56.2028 50.4526 57.0843 53.1325 57.0843C57.6002 57.0843 60.8372 55.68 63.0733 53.0157L63.0741 53.0146C65.3598 50.2962 66.584 46.4249 66.584 41.2215C66.584 36.6353 64.5865 31.8763 60.3066 26.9147C56.2944 22.2714 51.5277 18.6878 45.9889 16.1415L44.7127 18.1201Z" stroke="#E57404" stroke-opacity="0.46" stroke-width="3"/>
+                        </g>
+                        </svg>                        
+                  </div>
 
+          
+                  <div class="h-full relative z-10">
+                    <div x-show.immediate="testimonialActive === 1">
+                      <p class="mt-9 xl:w-4/6 text-lg m-auto" x-show.transition="testimonialActive == 1">
+                        "Mr Hanzife is a brilliant professional web designer. His level of commitment and detail-focused 
+                    mind made him the best collaborator i worked with in Morocco. I recommend 100%"
+                    </p>
+                    </div>
+          
+                    <div x-show.immediate="testimonialActive === 2">
+                      <p class="mt-9 xl:w-4/6 text-lg m-auto" x-show.transition="testimonialActive == 2">
+                        Yassir's work was outstanding. He is bright, enthusiastic and creative. Yassir was always willing to go
+                    above & beyond what was asked of him. He will be an asset to any organization or project he feels drawn to
+                    </p>
+                    </div>
+          
+                    
+                  </div>
+          
+                  <div class="flex my-4 justify-center items-center">
+                    <button @click.prevent="testimonialActive = 1" class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline inline-block rounded-full mx-2" :class="{'h-12 w-12 opacity-25 bg-indigo-300 text-gray-600': testimonialActive != 1, 'h-16 w-16 opacity-100 bg-indigo-600 text-white': testimonialActive == 1 }">
+                <img class="" src="Img/Testi2.png" alt="">
+                        
+                    </button>
+                    <button @click.prevent="testimonialActive = 2" class=" shadow-xs focus:outline-none focus:shadow-outline h-16 w-16 inline-block  rounded-full mx-2" :class="{'h-12 w-12 opacity-25 bg-indigo-300 text-gray-600': testimonialActive != 2, 'h-16 w-16 opacity-100 bg-indigo-600 text-white': testimonialActive == 2 }">
+                        <img class="w-full h-full" src="Img/1631718571467.jpg" alt="">    
+                    </button>
+                  </div>
+          
+                  <div class="flex justify-center px-6 pt-2 pb-6 md:py-6">
+                    <div class="text-center" x-show="testimonialActive == 1">
+                      <h2 class="text-sm md:text-base font-bold text-gray-300 leading-tight">Mohammed Ziouani</h2>
+                      <small class="text-gray-300 text-xs md:text-sm truncate">CEO @ ZTekEngineering</small>
+                    </div>
+          
+                    <div class="text-center" x-show="testimonialActive == 2">
+                      <h2 class="text-sm md:text-base font-bold text-gray-300 leading-tight">Younes Sabir </h2>
+                      <small class="text-gray-300 text-xs md:text-sm truncate">Founder @ MyPYLI</small>
+                    </div>
+          
+                  
+                  </div>
+                </div>
+              
+            </div>
+          
 
-        <!-- <p class="mt-9 xl:w-4/6 text-lg m-auto">
-            "Mr Hanzife is a brilliant professional web designer. His level of commitment and detail-focused 
-            mind made him the best collaborator i worked with in Morocco. I recommend 100%"
-        </p>
-        <img class="m-auto pt-8" src="Img/1631718571467.jpg" alt="">
-        <b>Mohammed Ziouani</b>
-        <p>CEO @ ZTekEngineering</p> -->
+            <!-- Slides -->
+            <!-- <div>
+                
+                <p class="mt-9 xl:w-4/6 text-lg m-auto">
+                    Yassir's work was outstanding. He is bright, enthusiastic and creative. Yassir was always willing to go
+                    above & beyond what was asked of him. He will be an asset to any organization or project he feels drawn to
+                </p>
+                <img class="m-auto pt-8" src="Img/1631718571467.jpg" alt="">
+                <b>Younes Sabir</b>
+                <p>Founder @ MyPYLI</p>
+            </div> -->
+            <!-- <div>
+                <p class="mt-9 xl:w-4/6 text-lg m-auto">
+                    "Mr Hanzife is a brilliant professional web designer. His level of commitment and detail-focused 
+                    mind made him the best collaborator i worked with in Morocco. I recommend 100%"
+                </p>
+                <img class="m-auto pt-8" src="Img/1631718571467.jpg" alt="">
+                <b>Mohammed Ziouani</b>
+                <p>CEO @ ZTekEngineering</p>
+            </div>            -->
 
+            </div>
+
+            
+        </ul>
     </section>
+
+    
 
 
 
