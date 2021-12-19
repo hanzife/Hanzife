@@ -20,10 +20,6 @@
     background-image: url(Img/bgmobile.png);
     background-repeat: no-repeat; background-size: 100%;
   }
-.cheaderTitle{
-    width: 300px;
-    height: 280px;
-}
   @media only screen and (min-width: 720px) {
     /* For tablets: */
     .cheader{
@@ -58,4 +54,18 @@
 
   
     } 
+  }
+
+
+  .gridOverlay{
+   
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  padding-top: 34%;
+  cursor: pointer;
+  
   }
