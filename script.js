@@ -16,6 +16,18 @@ $( ".GridProject" ).each(function(index) {
         });
 
         
+        /* ******* */
+  /* Works Page */
+  /* Sticky Services Menu */
+  $(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y > 100) {
+      $('.ServicesMenu').fadeIn();
+    } else {
+      $('.ServicesMenu').fadeOut();
+    }
+  });
+        
     });
 
     
