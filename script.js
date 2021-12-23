@@ -28,7 +28,17 @@ $( ".GridProject" ).each(function(index) {
     }
   });
         
-    });
+  // dropdown menu - toggle menu on mobile
+  const btn = document.querySelector(".mobile-menu-button");
+  const menu = document.querySelector(".mobile-menu");
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+
+
+  mobile-menu
+// End JQuery
+});
 
     
 
