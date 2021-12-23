@@ -36,7 +36,6 @@ $( ".GridProject" ).each(function(index) {
   });
 
 
-  mobile-menu
 // End JQuery
 });
 
