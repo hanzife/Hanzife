@@ -70,4 +70,11 @@
   
   }
 
-  
+  /* Projects Title */
+  .projecttitle {
+    font-size: 52px;
+    
+    background: -webkit-linear-gradient( #FD347C, #E57502);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

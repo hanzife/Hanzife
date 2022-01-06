@@ -35,7 +35,11 @@ $(document).ready(function () {
     menu.classList.toggle("hidden");
   });
 
-
+  $('img').on('dragstart', function(event) { event.preventDefault(); });
+    $("body").on("contextmenu", "img", function(e) {
+  return false;
+  });
+  
 // End JQuery
 });
 
