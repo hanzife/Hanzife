@@ -39,6 +39,21 @@ $(document).ready(function () {
     $("body").on("contextmenu", "img", function(e) {
   return false;
   });
+
+  //Toggle Categories
+  $("#cat-branding").click(function(){
+      $('.cat-uiux ').hide();
+      $('.cat-branding ').show();
+  });
+  $("#cat-uiux").click(function(){
+      $('.cat-branding ').hide();
+      $('.cat-uiux').show();
+  });
+  $("#cat-all").click(function(){
+    $('.cat-branding ').show();
+    $('.cat-uiux').show();
+});
+
   
 // End JQuery
 });
