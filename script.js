@@ -44,15 +44,32 @@ $(document).ready(function () {
   $("#cat-branding").click(function(){
       $('.cat-uiux ').hide();
       $('.cat-branding ').show();
+
+      $('#cat-uiux').css("color", 'white');
+      $('#cat-all').css("color", 'white');
+      $('#cat-branding').css("color", '#FD347C');
+
   });
+  
   $("#cat-uiux").click(function(){
       $('.cat-branding ').hide();
       $('.cat-uiux').show();
+      
+      $('#cat-all').css("color", "white");
+      $('#cat-uiux').css("color", '#FD347C');
+      $('#cat-branding').css("color", 'white');
+
   });
+  
   $("#cat-all").click(function(){
     $('.cat-branding ').show();
     $('.cat-uiux').show();
-});
+
+    $('#cat-uiux').css("color", 'white');
+    $('#cat-all').css("color", '#FD347C');
+    $('#cat-branding').css("color",'white'); 
+  });
+  // End Toggle 
 
   
 // End JQuery
